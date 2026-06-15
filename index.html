@@ -1,41 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Challenge Snake & Ladder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<select id="gameMode">
+    <option value="mixed">Mixed Mode</option>
+    <option value="speaking">Speaking Only</option>
+    <option value="vocabulary">Vocabulary Only</option>
+    <option value="grammar">Grammar Only</option>
+</select>
 
-<div class="container">
+</div>
 
-    <header>
-        <h1>🐍 English Challenge Snake & Ladder 🪜</h1>
-        <p>Vocabulary • Grammar • Speaking</p>
-    </header>
+<div class="setup-group">
 
-    <!-- SETUP SCREEN -->
+    <label>Player Names</label>
 
-    <section id="setupScreen" class="card">
+    <input type="text" id="player1" placeholder="Player 1">
+    <input type="text" id="player2" placeholder="Player 2">
+    <input type="text" id="player3" placeholder="Player 3">
+    <input type="text" id="player4" placeholder="Player 4">
 
-        <h2>Game Setup</h2>
+</div>
 
-        <div class="setup-group">
+<button id="startBtn">
+    Start Game
+</button>
 
-            <label>Number of Players</label>
+</section>
 
-            <select id="playerCount">
-                <option value="2">2 Players</option>
-                <option value="3">3 Players</option>
-                <option value="4">4 Players</option>
-            </select>
+<!-- MAIN GAME -->
 
-        </div>
+<section id="gameScreen" class="hidden">
 
-        <div class="setup-group">
+    <div class="game-layout">
 
-            <label>Question Mode</label>
+        <!-- SCOREBOARD -->
 
-            <select id="gameMode">
-                <option value="mixed">Mixed
+        <aside class="panel">
+
+            <h2>🏆 Scoreboard</h2>
+
+            <div id="scoreboard">
+
+            </div>
+
+            <hr>
+
+            <h2>🥇 Rankings</h2>
+
+            <div id="rankingBoard">
+
+            </div>
+
+        </aside>
+
+        <!-- BOARD -->
+
+        <main>
+
+            <div id="board">
+
+            </div>
+
+        </main>
+
+        <!-- CONTROLS -->
+
+        <aside class="panel">
+
+            <h2>Current Turn</h2>
+
+            <div id="currentPlayer">
+                -
+            </div>
+
+            <div id="diceContainer">
+
+                <div id="dice">
+                    🎲
+                </div>
+
+            </div>
+
+            <button id="rollBtn">
+                Roll Dice
+            </button>
+
+            <button id="restartBtn">
+                Restart Game
+            </button>
+
+            <div id="gameStatus">
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<!-- QUESTION POPUP -->
+
+<div id="questionModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2 id="questionCategory">
+            English Challenge
+        </h2>
+
+        <p id="questionText">
+
+        </p>
+
+        <button id="closeQuestion">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+<!-- WINNER POPUP -->
+
+<div id="winnerModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2 id="winnerTitle">
+            Winner
+        </h2>
+
+        <p id="winnerMessage">
+
+        </p>
+
+        <button id="closeWinner">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
