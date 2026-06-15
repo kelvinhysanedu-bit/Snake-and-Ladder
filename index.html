@@ -1,67 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Challenge Snake & Ladder</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Challenge Snake & Ladder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
-<h1>🐍 English Challenge Snake & Ladder 🪜</h1>
 
-<div id="setup">
-<h2>Game Setup</h2>
-<label>Mode:
-<select id="mode">
-<option value="mixed">Mixed</option>
-<option value="speaking">Speaking</option>
-<option value="vocabulary">Vocabulary</option>
-<option value="grammar">Grammar</option>
-</select>
-</label>
+    <header>
+        <h1>🐍 English Challenge Snake & Ladder 🪜</h1>
+        <p>Vocabulary • Grammar • Speaking</p>
+    </header>
 
-<label>Players:
-<select id="playerCount">
-<option>2</option>
-<option>3</option>
-<option>4</option>
-</select>
-</label>
+    <!-- SETUP SCREEN -->
 
-<div id="names">
-<input placeholder="Player 1">
-<input placeholder="Player 2">
-<input placeholder="Player 3">
-<input placeholder="Player 4">
-</div>
+    <section id="setupScreen" class="card">
 
-<button onclick="startGame()">Start Game</button>
-</div>
+        <h2>Game Setup</h2>
 
-<div id="game" class="hidden">
-<div class="layout">
-<div class="panel">
-<h3>🏆 Scoreboard</h3>
-<div id="scoreboard"></div>
-</div>
+        <div class="setup-group">
 
-<div id="board"></div>
+            <label>Number of Players</label>
 
-<div class="panel">
-<h3>Current Turn</h3>
-<div id="turnInfo"></div>
-<div id="dice">🎲</div>
-<button onclick="rollDice()">Roll Dice</button>
-<button onclick="restartGame()">Restart</button>
-<div id="rankings"></div>
-</div>
-</div>
+            <select id="playerCount">
+                <option value="2">2 Players</option>
+                <option value="3">3 Players</option>
+                <option value="4">4 Players</option>
+            </select>
 
-<div id="questionArea"></div>
-</div>
-</div>
-<script src="questions.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+        </div>
+
+        <div class="setup-group">
+
+            <label>Question Mode</label>
+
+            <select id="gameMode">
+                <option value="mixed">Mixed
